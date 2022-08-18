@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.rtkit.someservice.Tests.SomeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-18T11:08:25" hostname="WGD02RTI1555" time="4.973">
+  <properties/>
+  <testcase name="Find pet" classname="ru.rtkit.someservice.Tests.SomeTest" time="4.973"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
