@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    // Junit
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.2'
+// Rest-assured
+    testImplementation 'io.rest-assured:rest-assured:5.0.1'
+// JSONObject
+    implementation 'org.json:json:20210307'
+// Allure
+    testImplementation 'io.qameta.allure:allure-rest-assured:2.13.6'
+    testImplementation 'io.qameta.allure:allure-junit5:2.13.6'
+// Sqlite JDBC
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+// Sqlite Hibernate
+    testImplementation 'org.hibernate:hibernate-core:5.4.22.Final'
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+    implementation 'com.github.gwenn:sqlite-dialect:0.1.2'
+// Lombok
+    testImplementation 'org.projectlombok:lombok:1.18.20'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+}
+
+test {
+    useJUnitPlatform()
+}
